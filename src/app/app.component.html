@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <label [ngStyle]="{'color': viewFlag? 'blue':'black'}"><strong><a routerLink="view" (click)="clickingView()">View All Courses Applied</a></strong></label> 
+        &nbsp;&nbsp; 
+        <label [ngStyle]="{'color': !viewFlag? 'blue':'black'}"><strong><a routerLink="apply" (click)="clickingApply()">Apply for Course</a></strong></label>
+    </div>
+
+    <router-outlet></router-outlet>
+    
+</div>
+
+
+

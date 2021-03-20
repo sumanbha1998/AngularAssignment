@@ -1,0 +1,33 @@
+
+<div class="container">
+
+    <div *ngIf="traineeDetail.length>=1; then dataPresent else noData">
+        
+    </div>
+
+    <ng-template #dataPresent>
+        
+        <table>
+            <tr>
+                <th>Trainee Name</th>
+                <th>Course Name</th>
+                <th>Joining Date</th>
+                <th>Course Date</th>
+            </tr>
+            <tr *ngFor="let person of traineeDetail; index as i">
+                <td>{{ person.traineename }}</td>
+                <td>{{ person.courseName }}</td>
+                <td>{{ person.joiningdate }}</td>
+                <td>{{ person.coursedate }}</td>     
+            </tr>
+        </table>
+    </ng-template>
+
+    <ng-template #noData>
+        <h3>No Data Available</h3>
+    </ng-template>
+
+
+</div>
+
+
